@@ -1,15 +1,18 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
-import AppMain from './components/AppMain.vue';
+import AppSectionMain from './components/AppSectionMain.vue';
+import AppFooterLinks from './components/AppFooterLinks.vue';
+
 export default {
-    components: { AppHeader, AppMain }
+    components: { AppHeader, AppSectionMain, AppFooterLinks }
 
 }
 </script>
 
 <template>
     <AppHeader />
-    <AppMain />
+    <AppSectionMain />
+    <AppFooterLinks />
 </template>
 
 <style>
