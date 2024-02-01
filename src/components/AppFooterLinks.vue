@@ -137,9 +137,11 @@ export default {
 <template>
     <section id="link-footer">
         <div class="container">
+            <!--LEFT SIDE-->
             <div id="left-side">
                 <div id="dc-comic-links">
                     <div id="dc-comics">
+                        <!--LINK DC COMICS-->
                         <h3>DC COMICS</h3>
                         <ul>
                             <li v-for="item in dcComicsItem">
@@ -147,6 +149,7 @@ export default {
                             </li>
                         </ul>
                     </div>
+                    <!--LINK SHOP-->
                     <div id="shop-links">
                         <h3>SHOP</h3>
                         <ul>
@@ -156,6 +159,7 @@ export default {
                         </ul>
                     </div>
                 </div>
+                <!--LINK DC-->
                 <div id='dc'>
                     <h3>DC</h3>
                     <ul>
@@ -164,22 +168,23 @@ export default {
                         </li>
                     </ul>
                 </div>
+                <!--LINK SITES-->
                 <div id="sites">
                     <h3>SITES</h3>
                     <ul>
                         <li v-for="item in sitesItems">
-                            <a href="">{{ item.text }}</a>
+                            <a :href="item.url">{{ item.text }}</a>
                         </li>
                     </ul>
                 </div>
             </div>
+            <!--RIGHT SIDE-->
             <div id="right-side">
-
             </div>
         </div>
     </section>
 </template>
-<style scoped>
+<style lang="scss" scoped>
 #link-footer {
     background-image: url(../assets/img/footer-bg.jpg);
     background-repeat: no-repeat;
@@ -188,13 +193,11 @@ export default {
 }
 
 div.container {
-    height: 100%;
     display: flex;
 }
 
 #left-side {
     gap: 2rem;
-    height: 100%;
     margin: 0;
     flex-basis: 40%;
     display: flex;
@@ -214,7 +217,7 @@ div.container {
     background-image: url(../assets/img/dc-logo-bg.png);
     background-size: 500px;
     background-repeat: no-repeat;
-    background-position: 100px -50px;
+    background-position: 150px -50px;
 }
 
 h3 {
@@ -224,16 +227,16 @@ h3 {
 
 ul {
     padding: 0;
-}
 
-li {
-    list-style: none;
+    li {
+        list-style: none;
 
-}
+    }
 
-a {
-    color: gray;
-    text-decoration: none;
+    a {
+        color: gray;
+        text-decoration: none;
+    }
 }
 </style>
 
