@@ -56,11 +56,6 @@ export default {
         ]
     }),
 
-
-
-
-
-
 }
 </script>
 <template>
@@ -76,7 +71,7 @@ export default {
         </nav>
     </header>
 </template>
-<style>
+<style scoped>
 header {
     display: flex;
     align-items: center;
