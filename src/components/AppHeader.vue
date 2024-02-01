@@ -76,7 +76,7 @@ header {
     display: flex;
     align-items: center;
     font-weight: bold;
-    padding: 1.5rem 0;
+
     gap: 12rem;
 }
 

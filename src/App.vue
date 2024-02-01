@@ -2,9 +2,10 @@
 import AppHeader from './components/AppHeader.vue';
 import AppSectionMain from './components/AppSectionMain.vue';
 import AppFooterLinks from './components/AppFooterLinks.vue';
+import AppFooterEndPage from './components/AppFooterEndPage.vue';
 
 export default {
-    components: { AppHeader, AppSectionMain, AppFooterLinks }
+    components: { AppHeader, AppSectionMain, AppFooterLinks, AppFooterEndPage }
 
 }
 </script>
@@ -13,6 +14,7 @@ export default {
     <AppHeader />
     <AppSectionMain />
     <AppFooterLinks />
+    <AppFooterEndPage />
 </template>
 
 <style>
