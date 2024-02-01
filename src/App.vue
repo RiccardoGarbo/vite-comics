@@ -1,12 +1,16 @@
 <script>
+import AppHeader from './components/AppHeader.vue';
 export default {
+    components: { AppHeader }
 
 }
 
 
 </script>
 
-<template></template>
+<template>
+    <AppHeader />
+</template>
 
 <style>
 /*Generics*/
@@ -19,6 +23,7 @@ export default {
 
 body {
     min-height: 100vh;
+    font-family: "Open Sans", sans-serif;
 }
 
 /*Utils*/
@@ -30,5 +35,6 @@ body {
 img {
     max-width: 100%;
     display: block;
+
 }
 </style>
