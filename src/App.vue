@@ -3,9 +3,10 @@ import AppHeader from './components/AppHeader.vue';
 import AppSectionMain from './components/AppSectionMain.vue';
 import AppFooterLinks from './components/AppFooterLinks.vue';
 import AppFooterEndPage from './components/AppFooterEndPage.vue';
+import AppJumbotron from './components/AppJumbotron.vue';
 
 export default {
-    components: { AppHeader, AppSectionMain, AppFooterLinks, AppFooterEndPage },
+    components: { AppHeader, AppSectionMain, AppFooterLinks, AppFooterEndPage, AppJumbotron },
     data: () => ({
         navItemsHeader: [
             {
@@ -308,6 +309,7 @@ export default {
 
 <template>
     <AppHeader :links="navItemsHeader" />
+    <AppJumbotron />
     <AppSectionMain :images="images" />
     <AppFooterLinks :dc-comic-links="dcComicsItem" :shop-item="shopItem" :dc-items="dcItems" :sites-items="sitesItems" />
     <AppFooterEndPage :icons="iconFooter" />
