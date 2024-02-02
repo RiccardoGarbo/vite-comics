@@ -1,135 +1,11 @@
 <script>
 export default {
-    data: () => ({
-        dcComicsItem: [
-            {
-                text: 'Character',
-                Id: 1
-            },
-            {
-                text: 'Comincs',
-                Id: 2
-            },
-            {
-                text: 'Movies',
-                Id: 3
-            },
-            {
-                text: 'TV',
-                Id: 4
-            },
-            {
-                text: 'Games',
-                Id: 5
-            },
-            {
-                text: 'Videos',
-                Id: 6
-            },
-            {
-                text: 'News',
-                Id: 7
-
-            },
-
-        ],
-        shopItem: [
-            {
-                text: ' Shop DC',
-                Id: 1
-
-            },
-            {
-                text: 'Shop DC Collectibles',
-                Id: 2
-
-            },
-        ],
-        dcItems: [
-            {
-                text: 'Term Of Use',
-                Id: 1
-
-            },
-            {
-                text: 'Privacy Policy',
-                Id: 2
-
-            },
-            {
-                text: 'Ad Choices',
-                Id: 3
-
-            },
-            {
-                text: 'Advertising',
-                Id: 4
-
-            },
-            {
-                text: 'Jobs',
-                Id: 5
-
-            },
-            {
-                text: 'Subscription',
-                Id: 6
-
-            },
-            {
-                text: 'Talent Workshops',
-                Id: 7
-
-            },
-            {
-                text: 'CPSC Certificates',
-                Id: 8
-
-            },
-            {
-                text: 'Ratings',
-                Id: 9
-
-            },
-            {
-                text: 'Shop Help',
-                Id: 10
-
-            },
-            {
-                text: 'Contact Us',
-                Id: 11
-
-            }
-        ],
-        sitesItems: [
-            {
-                text: 'DC',
-                Id: 1
-
-            },
-            {
-                text: 'MAD Magazine',
-                Id: 2
-
-            },
-            {
-                text: 'DC Kids',
-                Id: 3
-
-            },
-            {
-                text: 'DC Universe',
-                Id: 4
-
-            },
-            {
-                text: 'DC Power Visa',
-                Id: 5
-
-            },
-        ]
-    })
+    props: {
+        dcComicLinks: Array,
+        shopItem: Array,
+        dcItems: Array,
+        sitesItems: Array
+    }
 
 }
 
@@ -144,7 +20,7 @@ export default {
                         <!--LINK DC COMICS-->
                         <h3>DC COMICS</h3>
                         <ul>
-                            <li v-for="item in dcComicsItem">
+                            <li v-for="item in dcComicLinks">
                                 <a href="">{{ item.text }}</a>
                             </li>
                         </ul>
@@ -163,7 +39,7 @@ export default {
                 <div id='dc'>
                     <h3>DC</h3>
                     <ul>
-                        <li v-for="item in dcItems">
+                        <li v-for="item in sitesItems">
                             <a href="">{{ item.text }}</a>
                         </li>
                     </ul>

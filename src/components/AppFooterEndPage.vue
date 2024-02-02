@@ -1,35 +1,8 @@
 <script>
 export default {
-    data: () => ({
-        iconFooter: [
-            {
-                image: 'facebook.png',
-                url: '#',
-                name: 'facebook'
-            },
-            {
-                image: 'twitter.png',
-                url: '#',
-                name: 'twitter'
-            },
-            {
-                image: 'youtube.png',
-                url: '#',
-                name: 'youtube'
-            },
-            {
-                image: 'pinterest.png',
-                url: '#',
-                name: 'pinterest'
-            },
-            {
-                image: 'periscope.png',
-                url: '#',
-                name: 'periscope'
-
-            }
-        ]
-    })
+    props: {
+        icons: Array
+    }
 
 }
 </script>
@@ -40,7 +13,7 @@ export default {
             <div id="link-footer-end">
                 <ul>
                     <li id="followUS">FOLLOW US</li>
-                    <li v-for="icon in iconFooter "> <a :href="icon.url"><img :src="`../../public/img/footer-${icon.image}`"
+                    <li v-for="icon in icons "> <a :href="icon.url"><img :src="`../../public/img/footer-${icon.image}`"
                                 :alt="icon.name"> </a>
                     </li>
                 </ul>
