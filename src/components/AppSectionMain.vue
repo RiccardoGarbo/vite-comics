@@ -1,13 +1,22 @@
 <script>
 export default {
+    props: {
+        images: Array
+    }
 
 }
 </script>
 <template>
     <section>
-        <main id="main-content" class="container">
-            <h1> --Content goes here--</h1>
-        </main>
+        <div class=" card-container container">
+            <div v-for="image in images" class="card">
+                <div>
+                    <img :src="image.thumb" alt="">
+                    <h5>{{ image.series }}</h5>
+                </div>
+
+            </div>
+        </div>
     </section>
 </template>
 <style scoped>
@@ -15,8 +24,25 @@ section {
     background-color: #1C1C1C;
 }
 
-h1 {
-    color: white;
-    padding: 3rem 0;
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+
+
+    .card {
+        flex-basis: calc(100% / 6);
+        padding: 20px;
+
+    }
+
+    img {
+        display: block;
+        height: 200px
+    }
+
+    h5 {
+        color: white
+    }
+
 }
 </style>
