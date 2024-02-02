@@ -1,5 +1,7 @@
 <script>
+import AppCard from './AppCard.vue';
 export default {
+    components: { AppCard },
     props: {
         images: Array
     }
@@ -9,13 +11,7 @@ export default {
 <template>
     <section>
         <div class=" card-container container">
-            <div v-for="image in images" class="card">
-                <div>
-                    <img :src="image.thumb" alt="">
-                    <h5>{{ image.series }}</h5>
-                </div>
-
-            </div>
+            <AppCard v-for="image in images" :image="image.thumb" :serie="image.series" />
         </div>
     </section>
 </template>
@@ -27,21 +23,12 @@ section {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-
+    padding: 2rem 0;
 
     .card {
         flex-basis: calc(100% / 6);
-        padding: 20px;
+        padding: 0 10px;
 
-    }
-
-    img {
-        display: block;
-        height: 200px
-    }
-
-    h5 {
-        color: white
     }
 
 }
