@@ -40,7 +40,7 @@ export default {
             <div id="link-footer-end">
                 <ul>
                     <li id="followUS">FOLLOW US</li>
-                    <li v-for="icon in iconFooter "> <a :href="icon.url"><img :src="`../assets/img/footer-${icon.image}`"
+                    <li v-for="icon in iconFooter "> <a :href="icon.url"><img :src="`../../public/img/footer-${icon.image}`"
                                 :alt="icon.name"> </a>
                     </li>
                 </ul>
