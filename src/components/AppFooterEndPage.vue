@@ -17,11 +17,8 @@ export default {
                                 :alt="icon.name"> </a>
                     </li>
                 </ul>
-
             </div>
         </div>
-
-
     </footer>
 </template>
 <style lang="scss" scoped>
